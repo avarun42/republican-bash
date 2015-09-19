@@ -15,6 +15,15 @@
 		window.onkeydown=keyPress;
 		window.onkeyup = keyRelease;
 
+
+		function keyPress(event){
+			keys[event.which]=true;
+
+		}
+		function keyRelease(event){
+			delete keys[eventwhich];
+		}
+		
 		jump();
 
 		var jump(){
@@ -26,12 +35,4 @@
 			if(keys[SPACE_KEY]){
 				console.log('HELLO');
 			}
-		}
-
-		function keyPress(event){
-			keys[event.which]=true;
-
-		}
-		function keyRelease(event){
-			delete keys[eventwhich];
 		}
