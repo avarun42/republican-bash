@@ -10,8 +10,11 @@
 			//document.getElementById() how you refer to an id. For right now, just believe that this works. Soon you will understand how it works.
 			document.getElementById('display').innerHTML = val;
 		}
-			
-		init();
+		
+		window.onload=init;
+		window.onkeydown=keyPress;
+		window.onkeyup = keyRelease;
+
 		jump();
 
 		var jump(){
@@ -20,4 +23,15 @@
 
 				})
 			}
+			if(keys[SPACE_KEY]){
+				console.log('HELLO');
+			}
+		}
+
+		function keyPress(event){
+			keys[event.which]=true;
+
+		}
+		function keyRelease(event){
+			delete keys[eventwhich];
 		}
